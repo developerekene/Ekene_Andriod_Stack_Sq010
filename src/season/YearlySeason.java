@@ -15,7 +15,7 @@ public class YearlySeason {
 
         //3. Ask for an adjective
         System.out.println("Please provide an Adjective of your choice");
-        String adjective = scanner.next();
+        String adjective = scanner.nextLine();
         scanner.close();
 
         //4. Displays result
