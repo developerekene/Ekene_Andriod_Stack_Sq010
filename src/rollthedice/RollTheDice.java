@@ -4,37 +4,41 @@ import java.util.Random;
 
 public class RollTheDice {
     public static void main(String args[]){
-        //initialize the total number of spaces
-        int totalNumberOfSpaces = 20;
+        int totalSpace = 20;
+        int thecurrentSpace = 0;
+        int totalrolls = 5;
 
-        //initialize the total number of rolls
-        int totalNumberOfRoll = 6;
+        Random random = new Random();
 
-        //initialize a variable to 0 to add the result from the dice
-        int myAddedNumber = 0;
+        System.out.println("Please roll the dice");
 
-        //run a loop 5 times or row the dice 5 times
-        for(int i=0; i<totalNumberOfRoll + 1; i++){
-            //generate a random number from 1-6
-            Random random = new Random();
-            //store the random number in a variable
-            int theDie = random.nextInt(6) + 1;
-            //Add the value of each row to initialize variable
-            myAddedNumber = myAddedNumber + theDie;
+        for(int i=1; i<=totalrolls; i++){
 
+            int dice = random.nextInt(6) + 1;
+            thecurrentSpace = thecurrentSpace + dice;
+
+            System.out.print(String.format("Roll #%d: You've rolled a %d. ", i, dice));
+
+            if(thecurrentSpace == totalSpace){
+                System.out.print("You're on space " + thecurrentSpace + ". Congrats, you win!");
+                break;
+            }
+            else if(thecurrentSpace > totalSpace){
+                System.out.print("Unfortunately, that takes you past " + totalSpace + " spaces. You lose!");
+                break;
+            }
+            else if(i==totalrolls && thecurrentSpace < totalSpace){
+                System.out.println("You're on space " + thecurrentSpace + ".");
+                System.out.println("Unfortunately, you didn't make it to all " +
+                        totalSpace + " spaces. You lose!");
+            }
+            else{
+                int spacesleft = totalSpace - thecurrentSpace;
+                System.out.print("You are now on space " + thecurrentSpace +
+                        " and have " + spacesleft + " more to go.");
+            }
+
+            System.out.println();
         }
-        //print out the added result
-        System.out.println(myAddedNumber);
-
-        //run a conditional to display the final results
-        if(myAddedNumber == totalNumberOfSpaces){
-            System.out.println("The Game ends, you have scored a total of " + myAddedNumber);
-        } else if(myAddedNumber > totalNumberOfSpaces){
-            System.out.println("You loose, you scored " + myAddedNumber + " above " + totalNumberOfSpaces);
-        } else{
-            System.out.println("You loose, you scored " + myAddedNumber + " below " + totalNumberOfSpaces);
-        }
-
-
     }
 }
