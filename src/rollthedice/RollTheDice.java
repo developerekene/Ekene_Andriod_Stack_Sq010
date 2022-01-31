@@ -24,12 +24,12 @@ public class RollTheDice {
                 break;
             }
             else if(thecurrentSpace > totalSpace){
-                System.out.print("Unfortunately, that takes you past " + totalSpace + " spaces. You lose!");
+                System.out.print("Sorry that is more than " + totalSpace + " spaces. You lose!");
                 break;
             }
             else if(i==totalrolls && thecurrentSpace < totalSpace){
-                System.out.println("You're on space " + thecurrentSpace + ".");
-                System.out.println("Unfortunately, you didn't make it to all " +
+                System.out.println("You're now on space " + thecurrentSpace + ".");
+                System.out.println("Oops, you didn't make it to all " +
                         totalSpace + " spaces. You lose!");
             }
             else{
