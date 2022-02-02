@@ -24,15 +24,10 @@ public class Movie {
 
 
 
-    public static double avgDate(int[] Holiday){
-        int start = 0;
-        for(int i = 0; i < Holiday.length; i++){
-            start = start + Holiday[i];
-        }
+    public static String avgDate(int[] Holiday){
+        String start = null;
 
-        double average = start / Holiday.length;
-
-        return average;
+        return start;
     }
 
 
