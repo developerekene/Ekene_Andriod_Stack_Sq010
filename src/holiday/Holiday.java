@@ -1,5 +1,7 @@
 package holiday;
 
+import java.util.ArrayList;
+
 public class Holiday {
 
     String name;
@@ -16,21 +18,20 @@ public class Holiday {
 
     //Creates a method that compares two instances of
     public boolean isSameMonth(Holiday firstHoliday, Holiday secondHoliday){
-        if(firstHoliday == secondHoliday){
+        if(firstHoliday.month == secondHoliday.month){
             return true;
         }else{
             return false;
         }
     }
 
-//    public static double avgDate(String[] Movie){
-//        String onlyPg;
-//        for(int i = 0; i < Movie.length; i++){
-//
-//        }
-//
-//        double average = start / Holiday.length;
-//
-//        return average;
-//    }
+    public static double avgDate (ArrayList<Holiday> arr){
+        double save = 0;
+
+        if(){
+
+        }
+        return save;
+    }
 }
+
