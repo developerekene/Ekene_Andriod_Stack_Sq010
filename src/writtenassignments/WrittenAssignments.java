@@ -16,5 +16,9 @@ public class WrittenAssignments {
     //How does objects relate with one another
     /**
      * Objects relate with each other using method invocation which performs some action or modifies the state of the receiving object.
+     *
+     * Is A relationship
+     * Aggregation
+     * composition
      */
-}a
+}

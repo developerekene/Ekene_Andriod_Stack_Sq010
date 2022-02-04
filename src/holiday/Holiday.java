@@ -1,6 +1,6 @@
 package holiday;
 
-public abstract class Holiday {
+public class Holiday {
 
     String name;
     int day;
@@ -15,22 +15,22 @@ public abstract class Holiday {
     }
 
     //Creates a method that compares two instances of
-    public boolean isSameMonth(){
-        if(valentineDay == NewYearDay){
+    public boolean isSameMonth(Holiday firstHoliday, Holiday secondHoliday){
+        if(firstHoliday == secondHoliday){
             return true;
         }else{
             return false;
         }
     }
 
-    public static double avgDate(String[] Movie){
-        String onlyPg;
-        for(int i = 0; i < Movie.length; i++){
-
-        }
-
-        double average = start / Holiday.length;
-
-        return average;
-    }
+//    public static double avgDate(String[] Movie){
+//        String onlyPg;
+//        for(int i = 0; i < Movie.length; i++){
+//
+//        }
+//
+//        double average = start / Holiday.length;
+//
+//        return average;
+//    }
 }
